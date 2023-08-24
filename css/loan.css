@@ -1,0 +1,40 @@
+
+.containerr{
+    clear:both;
+    
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0%;
+   
+  }
+  
+  nav{float:right;}
+  
+  .logo img{float:left;
+  width: 350px;
+  padding: 30px;
+  top: 10px;
+  
+  
+  }
+  
+  ul li{
+    display: inline-block; padding:30px;
+    margin-top: 20px;
+    font-size:20px; font-family:raleway;
+  }
+  
+  ul li:hover{
+    color:orange;
+    
+  }
+
+  body{
+    background: linear-gradient(to right,rgb(163, 250, 163),rgb(165, 165, 248));
+    overflow-x: hidden;
+  }
+  .container{
+    margin-top: 100px;
+  }
