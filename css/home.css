@@ -14,6 +14,9 @@ html,body{
     overflow: hidden;
 
 }
+.wrap{
+    display: none;
+}
 .main{
     width: 100%;
     height: 100%;
@@ -181,93 +184,112 @@ ul{
 
 /* Add this media query */
 @media only screen 
-and (min-device-width : 320px) 
+and (min-device-width : 220px) 
 and (max-device-width : 480px) {
-    .containerr{
-        display: flex;
-       align-items: center;
-       justify-content: center;
+    .main{
+        display: none;
+
     }
     nav{
-       display: none;
-    }
-    ul li{
         display: none;
-    }
-    .circle {
-      left: 50%;
-      top: 10%;
-      transform: translate(-50%, 0);
-      width: 80vw;
-      height: 80vw;
-      opacity: 1;
-      border: 0PX;
-    }
-  .minicrcl{
-    display: none;
-  }
-    .stripe {
-      display: block;
-      position: static;
-      transform: none;
-      width: 100%;
-      height: 60px;
-      margin: 20px auto;
-    }
-  
-    .str1, .str2, .str3, .str4, .str5 {
-      transform: none;
-    }
-  
-    .first, .sec {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    .smcircle {
-      /* margin-right: 60%;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 10px;
-      height: 10px; */
-      display: none;
-    }
-  
-    .sec h4 {
-      font-size: 4vw;
+    }html, body {
+        height: 100vh;
+        overflow: hidden;
+      }
       
-    }
-  
-    .sec h6 {
-      font-size: 2vw;
-      
-    }
-    .sec{
-        padding: 20PX;
-        margin-left: 17%;
-        margin-bottom: 30px;
-    }
-    a.button {
-        display: inline-block;
-        width: 180px;
+      .wrap {
         
-        padding: 10px 20px; /* Adjust padding as needed */
-        background-color: #fc3b00; /* Button background color */
-        color: rgb(255, 255, 255); /* Text color */
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px; /* Rounded corners */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+       
+      }
+      .mobile-btn{
+        margin-top: 15%;
+      }
+      
+      .button {
+        min-width: 300px;
+        min-height: 60px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 700;
+        color: #313133;
+        background: #4FD1C5;
+      background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 51%, #ffecd2 100%);
         border: none;
+        border-radius: 1000px;
+        box-shadow: 12px 12px 24px rgba(115, 111, 116, 0.64);
+        transition: all 0.3s ease-in-out 0s;
         cursor: pointer;
-        font-size: 14px; /* Font size */
-        font-weight: bold;
-        /* transition: background-color 0.3s, transform 0.3s; */
+        outline: none;
+        position: relative;
+        padding: 10px;
+        margin: 30px;
+        }
+        .button{
+            background-position: right center;
+        }
+      
+      button::before {
+      content: '';
+        border-radius: 1000px;
+        min-width: calc(300px + 12px);
+        min-height: calc(60px + 12px);
+        border: 4px solid #ede0f7;
+        
+        box-shadow: 0 0 60px rgba(153, 160, 160, 0.64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .3s ease-in-out 0s;
       }
-      a.button:hover{
-        background-color: #c8da29;
+      
+      .button:hover, .button:focus {
+        color: #313133;
+        transform: translateY(-6px);
       }
-    
+      
+      button:hover::before, button:focus::before {
+        opacity: 1;
+      }
+      
+      button::after {
+        content: '';
+        width: 30px; height: 30px;
+        border-radius: 100%;
+        border: 6px solid #ece7a1;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+      }
+      
+      button:hover::after, button:focus::after {
+        animation: none;
+        display: none;
+      }
+      
+      @keyframes ring {
+        0% {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+        100% {
+          width: 300px;
+          height: 300px;
+          opacity: 0;
+        }
+      }
   }
   @media only screen 
 and (min-device-width : 480px) 

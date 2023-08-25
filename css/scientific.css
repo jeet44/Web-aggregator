@@ -19,7 +19,8 @@ body {
  
 }
 
-nav{float:right;}
+nav{float:right;
+}
 
 .logo img{float:left;
 width: 350px;
@@ -60,7 +61,7 @@ ul li:hover{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-item: center;
+  align-content: center;
 }
 
 .calculator {
@@ -130,4 +131,13 @@ p {
 
 button::-moz-focus-inner {
   border-color: transparent;
+}
+@media screen and (max-width: 500px) {
+  nav{
+      display: none !important;
+  }
+  .logo{
+      margin-left: 15% !important;
+  }
+  
 }

@@ -6,6 +6,10 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-color: rgb(180, 231, 214);
+    overflow: hidden;
+}
 
 
 
@@ -52,15 +56,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     text-align: center;
-    background-color: azure;
+    
 }
 
 #calcTemp {
     padding: 29px 67px;
     min-height: 290px;
-    background-color: #cdd8fd;
+    background-color: #c9c9ca;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
@@ -109,4 +113,13 @@ label {
 
 #result{
     font-size: 27px;
+}
+@media (max-width: 500px) {
+    nav{
+        display: none;
+    }
+    .logo{
+        margin-left: 15%;
+    }
+    
 }

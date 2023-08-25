@@ -216,20 +216,6 @@ input {
     opacity: 1;
 }
 
-/* .card .socials{
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.socials i{
-
-    font-size: 25px;
-    transition: all .7s ease;
-    color: var(--current-color2);
-} */
 
 
 
@@ -291,8 +277,12 @@ input {
 
 @media only screen and (max-width: 600px) {
     body {
-        height: fit-content;
-       /* overflow: hidden; */
+        height: 100%;
+        width: 100%;
+       overflow: hidden;
+    }
+    .containerr{
+        overflow: hidden;
     }
     
     .container{
@@ -308,6 +298,9 @@ input {
         background-color: #5B85F9;
         color: #acffed;
         margin:19px auto;
+    }
+    .cards .card{
+        height: fit-content;
     }
 
     /* Remove the individual slide checkboxes */
