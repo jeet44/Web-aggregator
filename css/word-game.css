@@ -138,6 +138,20 @@ body{
 }
 
 @media screen and (max-width: 460px) {
+  nav{
+    display: none;
+  }
+  .containerr{
+    clear:both;
+    
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+   
+  }
   .wrapper {
     width: 100%;
   }

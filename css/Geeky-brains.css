@@ -376,6 +376,7 @@ footer button.show{
 
 .result_box .score_text span{
     display: flex;
+    
     margin: 10px 0;
     font-size: 18px;
     font-weight: 500;
@@ -422,4 +423,83 @@ footer button.show{
 .buttons button.quit:hover{
     color: #fff;
     background: #007bff;
+}
+
+@media (max-width: 500px) {
+    nav{
+      display: none;
+    }
+    .containerr{
+      clear:both;
+      
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+     
+    }
+
+    .info_box{
+        width: 300px;
+        background: #fff;
+        border-radius: 5px;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    .quiz_box{
+        width: 350px;
+    }
+    .result_box{
+        width: 350px;
+    }
+
+
+    .result_box .icon{
+        font-size: 100px;
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+    
+    .result_box .complete_text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .result_box .score_text span{
+        display:ruby-base;
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+    .result_box .score_text span p{
+        padding: 0 4px;
+        font-weight: 600;
+    }
+    
+    .result_box .buttons{
+        display: flex;
+        margin: 10px 0;
+    }
+    
+    .result_box .buttons button{
+        margin: 0 10px;
+        height: 45px;
+        padding: 0 20px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        transition: all 0.3s ease;
+    }
+
+
+
 }

@@ -281,9 +281,22 @@ input {
         width: 100%;
        overflow: hidden;
     }
-    .containerr{
-        overflow: hidden;
-    }
+    nav{
+        display: none;
+      }
+      .containerr{
+        clear:both;
+        
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        
+       
+      }
+    
     
     .container{
         transform-style: unset;
@@ -330,7 +343,7 @@ input {
     .cards {
         display: block; /* Use block display for mobile layout */
         max-width: 80%; /* Adjust the maximum width of the cards container */
-        height: 520px;
+        height: 580px;
         margin-left: -15%;
         margin-right: 15px; /* Center the cards horizontally */
         perspective: none;

@@ -122,3 +122,8 @@ btnRules.addEventListener("click", () => {
 btnClose.addEventListener("click", () => {
   modalRules.classList.toggle("show-modal");
 });
+
+
+
+
+

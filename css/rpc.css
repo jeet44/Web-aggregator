@@ -37,8 +37,7 @@ body {
 
 .containerr{
   clear:both;
-  
-  height: 100px;
+   height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -127,8 +126,8 @@ ul li:hover{
     "paper scissors"
     "rock rock";
   place-items: center;
-  height: 30rem;
-  padding-top: 4rem;
+  height: 20rem;
+  padding-top: 2rem;
 }
 .game::before {
   content: "";
@@ -209,7 +208,7 @@ ul li:hover{
 /* Results */
 .results {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2,1fr);
   place-items: center;
   grid-template-areas:
     "you-title ai-title"
@@ -265,6 +264,19 @@ ul li:hover{
     opacity: 1;
   }
 } */
+
+
+
+.hide{
+  opacity: 0;
+}
+.results .hide{
+  opacity: 0;
+}
+
+
+
+
 
 .results__winner {
   grid-area: result-winner;
@@ -379,4 +391,197 @@ ul li:hover{
 
 .hidden {
   display: none;
+}
+@media (max-width: 500px) {
+  nav{
+    display: none;
+  }
+  .containerr{
+    clear:both;
+    
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+   
+  }
+  body{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+  .container {
+    position: relative;
+    max-width: 300px;
+    /* height: 100vh; */
+    /* margin: 0 auto; */
+    padding-top: 2rem;
+    overflow: hidden;
+    /* margin-bottom: 190px; */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    border: 3px solid var(--outline);
+    border-radius: 20px;
+    padding: 1rem 1.4rem 1rem 2rem;
+  }
+  
+  .logo img {
+    height: 80%;
+  }
+
+  .game {
+   overflow: hidden;
+  }
+
+ 
+
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    width: 100px;
+    height: 100%;
+    line-height: 1;
+  }
+  
+  .score__title {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: var(--score-text);
+  }
+  
+  .score__number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-text);
+  }
+
+  .choice {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 0.5rem var(--shadow-light);
+  }
+  .choice::before,
+  .choice::after {
+    content: "";
+    position: absolute;
+    left: 1%;
+    top: -3%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+
+
+  .choice img {
+    transform: scale(1);
+  }
+
+  .modal{
+    display: none;
+  }
+  .rules-btn{
+    display: none;
+  }
+
+
+  .results.show-winner {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "you-title . ai-title"
+      "you-picked result-winner ai-picked";
+  }
+  .results {
+    display: none;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    grid-template-areas:
+      "you-title ai-title"
+      "you-picked ai-picked";
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .results__heading {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 4rem 0 8rem;
+  }
+  .results__result {
+    min-width: 1rem;
+    min-height: 1rem;
+    background: #16213d;
+    border-radius: 50%;
+    transform: scale(1.4);
+    z-index: -1;
+  }
+  
+  .results__heading:first-of-type {
+    grid-area: you-title;
+  }
+  .results__heading:last-of-type {
+    grid-area: ai-title;
+  }
+  .results__result:first-of-type {
+    grid-area: you-picked;
+  }
+  .results__result:last-of-type {
+    grid-area: ai-picked;
+  }
+  
+  .results.show-winner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "you-title . ai-title"
+      "you-picked result-winner ai-picked";
+  }
+
+  .results__winner {
+    grid-area: result-winner;
+    display: grid;
+    place-items: center;
+  }
+
+  .results__text {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .play-again {
+    background: #fff;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 0.6rem;
+    color: var(--dark-text);
+    padding: 0.6rem 1.5rem;
+    font-family: inherit;
+    text-transform: inherit;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  .play-again:focus {
+    border: 2px solid var(--outline);
+  }
+
+
 }

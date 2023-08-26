@@ -132,12 +132,42 @@ p {
 button::-moz-focus-inner {
   border-color: transparent;
 }
-@media screen and (max-width: 500px) {
+@media (min-width: 200px) and (max-width: 500px) {
   nav{
-      display: none !important;
+    display: none;
   }
-  .logo{
-      margin-left: 15% !important;
+  .containerr{
+    clear:both;
+    
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+   
+  }
+  body{
+    overflow: hidden;
+  }
+  .calculator {
+    width: 300px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    font-size: 16px;
+    background:linear-gradient(to right, #4d4a4a,rgb(88, 87, 87))
+  }
+  .input {
+    width: 270px;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid black;
+    background-color: #494646;
+    color: #d9d9d9;
+    padding: 0 5px 0 5px;
+    margin: 0 0px 10px 0px;
+    font-size: 30px;
   }
   
 }

@@ -281,9 +281,22 @@ input {
         width: 100%;
        overflow: hidden;
     }
-    .containerr{
-        overflow: hidden;
-    }
+    nav{
+        display: none;
+      }
+      .containerr{
+        clear:both;
+        
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        
+       
+      }
+    
     
     .container{
         transform-style: unset;

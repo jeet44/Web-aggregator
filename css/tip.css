@@ -97,7 +97,7 @@ hr {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url(tipping_shutterstock_1546543944.jpg);
+	
 	background-size: cover; /* Adjust as needed */
 	background-repeat: no-repeat; /* Adjust as needed */
 	opacity: 0.1; /* Adjust opacity here */
@@ -152,3 +152,19 @@ label, input {
 	}
 
 } 
+@media (min-width: 200px) and (max-width: 500px) {
+    nav{
+      display: none !important;
+    }
+    .containerr{
+      clear:both;
+      
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+     
+    }
+  }

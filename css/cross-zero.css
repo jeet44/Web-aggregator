@@ -53,7 +53,7 @@ body {
   }
 
   .main {
-    padding: 40px;
+   
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -89,4 +89,54 @@ body {
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
+  }
+  @media (max-width: 500px) {
+    nav{
+      display: none;
+    }
+    .containerr{
+      clear:both;
+      
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+     
+    }
+
+    .main {
+     
+      height: 70vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+
+    .container {
+      display: grid;
+      width: 300px;
+      height: 300px;
+      grid-template-columns: auto auto auto;
+      background: darkgrey;
+      margin-top: 10px;
+      padding: 1px;
+    }
+    .box {
+      background: white;
+      height: 100px;
+      width: 100px;
+      border: 1px solid darkgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 100px;
+      color: darkslategrey;
+      cursor: pointer;
+    }
+
   }
