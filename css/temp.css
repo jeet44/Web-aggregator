@@ -117,9 +117,17 @@ label {
 @media (max-width: 500px) {
     nav{
         display: none;
-    }
-    .logo{
-        margin-left: 15%;
-    }
+      }
+      .containerr{
+        clear:both;
+        
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+       
+      }
     
 }

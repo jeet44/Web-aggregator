@@ -192,7 +192,18 @@ and (max-device-width : 480px) {
     }
     nav{
         display: none;
-    }html, body {
+      }
+      .containerr{
+        clear:both;
+        
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+       
+      }html, body {
         height: 100vh;
         overflow: hidden;
       }
